@@ -9,5 +9,5 @@ Gem::Specification.new do |s|
   s.files       = ["lib/verse_count.rb"]
   s.homepage    = 'http://rubygems.org/gems/verse_count'
   s.license     = 'MIT'
-  s.metadata    = { "source_code_uri" => "" }
+  s.metadata    = { "source_code_uri" => "https://github.com/kkuivenhoven/VerseCount" }
 end

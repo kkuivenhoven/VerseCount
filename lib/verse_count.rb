@@ -1,3 +1,6 @@
+require 'csv'
+require 'open-uri'
+
 class VerseCount
 	@wholeBible = Hash.new
 	
@@ -8,27 +11,19 @@ class VerseCount
 	end
 
 	def self.init
-		@bookChapNums = File.read("BookChapNums.csv")
-		@separate = @bookChapNums.split(' ')
-		@separate.each do |separ|
+		CSV.new(open("https://raw.githubusercontent.com/kkuivenhoven/VerseCount/master/lib/BookChapNums.csv")).each do |bookLine|
 			@verseCount = Hash.new
-			@line = separ.split(',')
 			i = 0
 			chapter = 1
-			@line.each do |line|
+			bookLine.each do |bLine|
 				if i > 2
-					@verseCount[chapter] = line
+					@verseCount[chapter] = bLine
 					chapter += 1
 				end
 				i += 1
 			end
-			if @line[1].include? "_"
-				# @wholeBible[@line[1].sub("_", " ")] = @verseCount
-				@wholeBible[@line[1]] = @verseCount
-			else
-				@wholeBible[@line[1]] = @verseCount
-			end
-		end
+			@wholeBible[bookLine[1]] = @verseCount
+		end 
 		return "init complete"
 	end
 
