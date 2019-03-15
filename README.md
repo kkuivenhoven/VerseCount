@@ -1,6 +1,6 @@
 # VerseCount Gem
 A Ruby Gem that allows the user to obtain the number of verses total for each chapter of the Bible.
-<br><br>
+<br>
 Additional gem information (i.e. download count, etc.) also available [here](https://rubygems.org/gems/verse_count).
 <br>
 [![VerseCount](https://badge.fury.io/rb/verse_count.svg)](https://badge.fury.io/rb/verse_count)
