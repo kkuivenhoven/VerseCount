@@ -19,14 +19,14 @@ Additional gem information (i.e. download count, etc.) also available [here](htt
 1. Get all books of the Bible:<br>
 	`@books = VerseCount.getBooksOfBible`
 
-2. Get total number of chapters for a particular book of the Bible.
+2. Get total number of chapters for a particular book of the Bible.<br>
 	For example, to get the total number of chapters for the book of Genesis:<br>
 	`@chapter_count = VerseCount.getNumberOfChapters("Genesis")`
 
-3. Get total verse count for a particular chapter and book of the Bible.
+3. Get total verse count for a particular chapter and book of the Bible.<br>
 	For example, to get the total number of verses for chapter 1 of the book of Genesis:<br>
 	`@genesis_ch1_count = VerseCount.getVerseCountForChapter("Genesis", 1)`
 
-4. Get total verse count for all chapters of each book of the Bible.
+4. Get total verse count for all chapters of each book of the Bible.<br>
 	For example, to get the total verses for all chapters of Genesis:<br>
 	`@genesis_count = VerseCount.getTotalBookVerseCount`
